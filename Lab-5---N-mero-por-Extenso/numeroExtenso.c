@@ -244,7 +244,7 @@ char * numeroPorExtenso(int numero){
 	unid = unidade(numero);
 	//Os blocos condicionais sinalizam os casos em que precisamos de uma atenção a mais.
 	//Iremos analizar este caso se o nosso número estiver entre 10 e 19
-	if(cent == 0 & dez == 1){
+	if(cent == 0 & dez > 0){
 		tamanhoStringDezena = tamanhoString(dezenasPorExtenso(dez, unid)); // Calcula o tamanho da String
 		dezenasExtenso = (char*)malloc(tamanhoStringDezena*sizeof(char)); // Aloca exatamente o que é necessário para armazenar o número por extenso
 		dezenasExtenso = dezenasPorExtenso(dez, unid); //Atribuímos o extenso da Dezena na variável 'dezenasExtenso' e a retornamos.
